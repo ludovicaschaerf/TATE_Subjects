@@ -126,8 +126,9 @@ document.addEventListener('keydown', (event) => {
 	},true);
 
 document.getElementById("Info").addEventListener("click", function() {
-		window.alert("s - start/stop animantion\n r - reset view\n b - back\n + - faster animation\n - slower animation\n double click - next level\n dragging - orbit controls");
+		window.alert("s - start/stop animantion\n r - reset view\n b - back\n + - faster animation\n - - slower animation\n double click - next level\n dragging - orbit controls");
 });
+
 
 document.getElementById("BtnA").addEventListener("click", function() {
 		sort_category = 'artist';
