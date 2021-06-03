@@ -169,7 +169,7 @@ function create_level_three(img) {
 	cube.position.set((boundboxes[0*ncols][0]+boundboxes[0*ncols][1])/2,(boundboxes[0*ncols][2]+boundboxes[0*ncols][3])/2,0);
 	scene.add(level3);
 	level3.position.z = 0;
-	let metadata_img = '<b>Title</b>: '+ metadata[img]['title'] + '<br /><b>Artist</b>: '+metadata[img]['artist'] + '<br /><b>Creation year</b>: '+ metadata[img]['creation_year'] + '<br /><b>Acquisition year</b>: '+ metadata[img]['acquisition_year']  + '<br /><b>Medium</b>: '+ metadata[img]['medium']  + '<br /><b>Subjects</b>: '+ metadata[img]['subjects'] + '<br /><b>Subjects second level</b>: '+ metadata[img]['subjects_2'];
+	let metadata_img = '<b>Title</b>: '+ metadata[img]['title'] + '<br /><b>Artist</b>: '+metadata[img]['artist'] + '<br /><b>Creation year</b>: '+ metadata[img]['year'] + '<br /><b>Acquisition year</b>: '+ metadata[img]['acquisitionYear']  + '<br /><b>Medium</b>: '+ metadata[img]['medium']  + '<br /><b>Subjects</b>: '+ metadata[img]['subjects'] + '<br /><b>Subjects second level</b>: '+ metadata[img]['subjects_2'];
 	middleDiv.hidden = false;
 	middleDiv.innerHTML = metadata_img;
 
