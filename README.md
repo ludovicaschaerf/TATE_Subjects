@@ -6,4 +6,4 @@
 - [metadata](./js_files/metadata.js): contains all the metadata of each image accessed by image name. To be used for the 4th screen where the image is displayed alongside the metadata.
 - [subj1id](./js_files/subj1id.js): contains the list of images belonging to each category at level 1. To be used to sample the images to show in each box of the grid in the homepage.
 - [subj2id](./js_files/subj2id.js): contains the list of images belonging to each category at level 2. To be used to sample the images to show in each box of the grid of subclasses in the 2nd screen.
-- len2display = {2:2, 14:(7,2), 3:3, 5:5, 9:(3,3), 21:(7,3), 10:(5,2), 6:6, 8:(4,2)} (how to create a grid based on the number of subclasses)
+- [order2subj](./js_files/order2subj.js): contains data for each subclass ordered by different factors (medium, artist, year, acquisition year).
