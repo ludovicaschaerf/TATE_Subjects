@@ -38,7 +38,7 @@ function create_level_zero() {
 				cube.name = "tile-0"+"-"+pos.toString();
 				//console.log(cube.name);
 				cube.scale.set(width/ncols,height/nrows,0.1);
-				cube.position.set((boundboxes[i*ncols+j][0]+boundboxes[i*ncols+j][1])/2,(boundboxes[i*ncols+j][2]+boundboxes[i*ncols+j][3])/2,0);
+				cube.position.set((boundboxes[i*ncols+j][0]+boundboxes[i*ncols+j][1])/2,(boundboxes[i*ncols+j][2]+boundboxes[i*ncols+j][3])/2,deg_abstr[subject]*2 - 2);
 			}
 		}
 	}

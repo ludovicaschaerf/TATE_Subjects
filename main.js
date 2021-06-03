@@ -17,6 +17,7 @@ var l1to2; // Map from level1 subjs to list of level2 subjs
 var id2url; //Map from id to corresponding URL
 var metadata; //Map from id to its metadata
 var order2subj;
+var deg_abstr;
 var top_subjects = get_keys(subj1id); //list of top level sujects
 
 // variables for animation timing
