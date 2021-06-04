@@ -210,7 +210,7 @@ function animate() {
 		}
 	}
 
-	if (animation) { transition(current_pos, currentobject,70)};
+	if (animation) { transition1(current_pos, currentobject, 70)};
 	renderer.render( scene, camera );
 	requestAnimationFrame( animate );
 	controls.update();
