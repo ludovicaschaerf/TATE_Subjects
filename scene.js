@@ -96,7 +96,7 @@ function create_level_one(subj) {
 					//console.log(cube.name);
 					let max_colrow = Math.max(ncols, nrows);
 					cube.scale.set(width/max_colrow,height/max_colrow,0.1);
-					cube.position.set((boundboxes[i*ncols+j][0]+boundboxes[i*ncols+j][1])/2,(boundboxes[i*ncols+j][2]+boundboxes[i*ncols+j][3])/2,0);
+					cube.position.set((boundboxes[i*ncols+j][0]+boundboxes[i*ncols+j][1])/2,(boundboxes[i*ncols+j][2]+boundboxes[i*ncols+j][3])/2,deg_abstr[subject]*3 - 2.5);
 				}
 			}
 		}

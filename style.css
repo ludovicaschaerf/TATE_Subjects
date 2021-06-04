@@ -1,8 +1,7 @@
 #upperDiv {
   background-color: black;
   position: absolute;
-  left: 0px;
-  right: 1025px;
+  width: 50%;
   padding: 10px;
 
 }
@@ -12,9 +11,8 @@
 
 #lowerDiv {
   position: absolute;
-  left: 0px;
   background-color: black;
-  right: 1025px;
+  width: 52%;
   padding: 10px;
 }
 
