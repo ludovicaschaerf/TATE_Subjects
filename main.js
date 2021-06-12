@@ -57,6 +57,7 @@ var currentobject;
 var sort_category = 'artist'; // default category to sort level2
 var animation = false; // variable controlling the transition animation
 var current_pos; //variable storing the position of the current clicked tile
+var phase = 0;
 
 
 // change this texture to plain black screen or initial texture per block

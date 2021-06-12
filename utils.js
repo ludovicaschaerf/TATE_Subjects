@@ -202,48 +202,92 @@ function transition(pos,object,numSteps) {
 
 
 function transition1(pos,object, numSteps) {
+	let direction = new THREE.Vector3(0,0,1);
 	switch (currentlevel) {
 		case 0:
-			let direction = new THREE.Vector3();
-			direction.subVectors(camera.position,level0.position);
-			if (Math.abs(level0.position.z - camera.position.z) > near) {
-				level0.position.addScaledVector(direction,1/numSteps);
-			} else {
-				makeObjectInvisible(level0);
-				//animation = true;
-				console.log("Opening Level 1");
-				list_of_subjects.push(currentsubjects);
-				list_of_sizes.push(nrows);
-				create_level_one(top_subjects[pos]);
-				console.log(level1);
-				direction.subVectors(camera.position,level1.position);
-				if (Math.abs(level1.position.z - camera.position.z) > 0) {
+			switch (phase) {
+				case 0:
+					console.log("Opening Level 1");
+					list_of_subjects.push(currentsubjects);
+					list_of_sizes.push(nrows);
+					create_level_one(top_subjects[pos]);
+					level1.position.set(0,0,-camera.position.z);
+					console.log(level1);
+					phase = 1;
+					break;
+				case 1:
+					level0.position.addScaledVector(direction,1/numSteps);
 					level1.position.addScaledVector(direction,1/numSteps);
-				} else {
-
-				}
-			}
+					if (level0.position.z >= camera.position.z) {
+						phase = 2;
+					};
+					break;
+				case 2:
+					makeObjectInvisible(level0);
+					level0.position.set(0,0,0);
+					animation = false;
+					controls.reset();
+					currentlevel++;
+					phase = 0;
+					break;
+				};
 			break;
-			//level0.position.set(currentCoords.x,currentCoords.y,currentCoords.z);
-			level0.position.set(0,0,0);
-			animation = false;
-			controls.reset();
-			currentlevel++;
 		case 1:
-			makeObjectInvisible(level1);
-			console.log("Opening Level 2");
-			list_of_subjects.push(currentsubjects);
-			list_of_sizes.push(nrows);
-			create_level_two(currentsubjects[pos],true);
+			switch (phase) {
+				case 0:
+					console.log("Opening Level 2");
+					list_of_subjects.push(currentsubjects);
+					list_of_sizes.push(nrows);
+					create_level_two(currentsubjects[pos],true);
+					level2.position.set(0,0,-camera.position.z);
+					console.log(level2);
+					phase = 1;
+					break;
+				case 1:
+					level1.position.addScaledVector(direction,1/numSteps);
+					level2.position.addScaledVector(direction,1/numSteps);
+					if (level1.position.z >= camera.position.z) {
+						phase = 2;
+					};
+					break;
+				case 2:
+					makeObjectInvisible(level1);
+					level1.position.set(0,0,0);
+					animation = false;
+					controls.reset();
+					currentlevel++;
+					phase = 0;
+					break;
+				};
 			break;
 		case 2:
-			makeObjectInvisible(level2);
-			removeButtons();
-			console.log("Opening Level 3");
-			list_of_subjects.push(currentsubjects);
-			list_of_sizes.push(nrows);
-			//console.log(pos,currentsubjects[pos]);
-			create_level_three(currentsubjects[pos]);
+			switch (phase) {
+				case 0:
+					console.log("Opening Level 3");
+					list_of_subjects.push(currentsubjects);
+					list_of_sizes.push(nrows);
+					create_level_three(currentsubjects[pos]);
+					level3.position.set(0,0,-camera.position.z);
+					console.log(level3);
+					removeButtons();
+					phase = 1;
+					break;
+				case 1:
+					level2.position.addScaledVector(direction,1/numSteps);
+					level3.position.addScaledVector(direction,1/numSteps);
+					if (level2.position.z >= camera.position.z) {
+						phase = 2;
+					};
+					break;
+				case 2:
+					makeObjectInvisible(level2);
+					level2.position.set(0,0,0);
+					animation = false;
+					controls.reset();
+					currentlevel++;
+					phase = 0;
+					break;
+				};
 			break;
 		}
 }
