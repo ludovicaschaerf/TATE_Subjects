@@ -1,88 +1,72 @@
 #upperDiv {
-  background-color: black;
-  position: absolute;
-  width: 31%;
-  padding: 10px;
-
+    background-color: black;
+    position: absolute;
+    padding: 10px;
 }
+
 #canvas {
-  background-color: black;
+    background-color: black;
 }
 
 #lowerDiv {
-  position: absolute;
-  background-color: black;
-  width: 32%;
-  padding: 10px;
+    position: absolute;
+    background-color: black;
+    padding: 10px;
 }
 
 #BtnA {
-  border: 0.8px solid white;
-  width: 24%;
-  height: 100%;
-  text-align: center;
-  color: white;
-  font-size: 0.8rem;
-  background-color: black;
-  font-family: "Trebuchet MS", sans-serif;
-
+    border: 0.8px solid white;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    background-color: black;
+    font-family: "Trebuchet MS", sans-serif;
 }
 
 #BtnCY {
-  border: 0.8px solid white;
-  width: 24%;
-  height: 100%;
-  text-align: center;
-  color: white;
-  font-size: 0.8rem;
-  background-color: black;
-  font-family: "Trebuchet MS", sans-serif;
-
+    border: 0.8px solid white;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    background-color: black;
+    font-family: "Trebuchet MS", sans-serif;
 }
+
 #BtnAY {
-  border: 0.8px solid white;
-  width: 24%;
-  height: 100%;
-  text-align: center;
-  color: white;
-  font-size: 0.7rem;
-  background-color: black;
-  font-family: "Trebuchet MS", sans-serif;
-
+    border: 0.8px solid white;
+    text-align: center;
+    color: white;
+    font-size: 0.7rem;
+    background-color: black;
+    font-family: "Trebuchet MS", sans-serif;
 }
-#BtnM {
-  border: 0.8px solid white;
-  width: 24%;
-  height: 100%;
-  text-align: center;
-  color: white;
-  font-size: 0.8rem;
-  background-color: black;
-  font-family: "Trebuchet MS", sans-serif;
 
+#BtnM {
+    border: 0.8px solid white;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    background-color: black;
+    font-family: "Trebuchet MS", sans-serif;
 }
 
 #Info {
-  border: 0.8px solid white;
-  width: 24%;
-  height: 100%;
-  text-align: center;
-  color: white;
-  font-size: 0.8rem;
-  background-color: black;
-  font-family: "Trebuchet MS", sans-serif;
-
+    border: 0.8px solid white;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    background-color: black;
+    font-family: "Trebuchet MS", sans-serif;
 }
 
 #middleDiv {
-	position: absolute;
-  left: 50px;
-  width: 28%;
-  top: 300px;
-  color: white;
-  font-size: 0.7rem;
-  background-color: black;
-  z-index: 100;
-  font-family: "Trebuchet MS", sans-serif;
-	text-align: left;
+    position: absolute;
+    left: 50px;
+    top: 300px;
+    color: white;
+    font-size: 0.7rem;
+    background-color: black;
+    z-index: 100;
+    font-family: "Trebuchet MS", sans-serif;
+    text-align: left;
 }
